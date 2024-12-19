@@ -68,8 +68,8 @@ Cuando se comienza a trabajar con la terminal de linux lo mas comun es encontrar
 ## Los comandos
 Es una una sentencia logica que instruye a Linux OS realizar una accion o operacion, su estructura es la siguiente
 > $ comando   -opcion   argumentos
-> El comando representa la instruccion objetivo que se quiere realizar, la opcion representa una variante de la instruccion principal que se quiere realizar
-> y los argumentos establecen el contenido o elemento al que se aplica el comando, siendo en principio la base de escritura de comandos en la terminal de linux.
+El comando representa la instruccion objetivo que se quiere realizar, la opcion representa una variante de la instruccion principal que se quiere realizar
+y los argumentos establecen el contenido o elemento al que se aplica el comando, siendo en principio la base de escritura de comandos en la terminal de linux.
 
 ## Manipulacion de archivos dentro de linux
 Uno de los comandos mas elementales y comunes al momento de trabajar con linux es el de listar los archivos dentro de un directorio (carpeta) este es el poderoso ls (list source)
