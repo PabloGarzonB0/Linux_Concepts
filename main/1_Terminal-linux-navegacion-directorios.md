@@ -63,4 +63,20 @@ Una de las herramientas mas poderosas con las que puenta la terminal de linux so
 Tenga en cuenta que vi y vim tiene 2 modos de operacion, el modo **Insertar** y el modo **comandos** <br>
 para estar en el modo insertar hay que precionar la techa [i] Y para ingrasar al modo de comando se utiliza la tacla [ESC]
 
- `:sav file.txt` se utiliza para guardar los cambios hechos sobre el archivo, `:w` se utiliza para escribir en el archivo `:q` se utiliza para salir de la sesion  `:q!` se sale sin guardar los cambios. 
+ `:sav file.txt` se utiliza para guardar los cambios hechos sobre el archivo,<br> `:w` se utiliza para escribir en el archivo <br> `:q` se utiliza para salir de la sesion <br> `:q!` se sale sin guardar los cambios. 
+
+ Dentro de Linux OS existen los  `paquetes ` que son archivos de almacenamiento que contienen componentes necesarios para instalar software o actualizaciones y los  `Gestores de paqueetes` que se utilizan para destionar descaras o instalas paquetes 
+ los paquetes mas comunes son los  `.deb` y los  `.rpm` que son compatibles con diferentes tipos de distribuciones, los primeros son compatibles con debian, ubuntu y Mint, mientras que los segundos son compatibles con CentOs/RHEL, fedora y Red Hat
+Existen gestores de paquetes que se basdan en GUI tales como PackegeKit y Update Manaager utilizados para instalaciones automaticas, resolver dependencias o notificar actualizaciones.
+
+> [!WARNING]
+> Es importante, siempre antes de hacer una actualizacion actulizar dependencias y actualizaciones disponibles de todas las aplicaciones con el comando `sudo apt update` enlista actualizaciones y `sudo apt upgrade` este ultimo actuliza los paquetes disponibles
+
+El comando para crear directorio es el siguiente:
+```
+$ mkdir directory-name 
+```
+El comando para crear archivos es el siguiente dentro de la ruta actual de directorio:
+```
+$ touch file-name
+```
