@@ -28,6 +28,19 @@ algunos de los comandos especiales para moverse por las rutas de archivos son lo
 | `.`     | directorio actual de trabajo                      |
 | `..`    | dirige al directorio padre de la direccion actual |
 
+
+## Comandos de asistencia incial de comandos de la terminal
+Generalmente saber todas las posibilidades que trae consigo la terminal de linux requiere de tener a la mano una herramienta de asistencia que brinde informacion
+de 
+| :boom: | Comando                                                                                                             |
+| ------ | :------------------------------------------------------------------------------------------------------------------ |
+| type   | Permite distinguir el tipo de comando que se utiliza (aveces son build-in o se encuentra en un fichero de comandos) |
+| help   | describe  con detalle la capacidad de un comando, cuenta con sus variantes como -s -m -d                            |
+| man    | instruccion practica para usar un comando                                                                           |
+| info   | describe  con detalle la capacidad de un comando                                                                    |
+| tldr   | Tutoral para usar un comando, caracteristicas del comando                                                           |
+
+
 # Comandos principales para guiarse dentro de la terminal de linux 
 ```
 $ ls  
@@ -37,6 +50,10 @@ permite listar los archivos y elementos de un directorio
 $ ls -l  
 ```
  permite listar los archivos y dar mas detalles como permisos, tamano, fecha de modificacion
+ Es importante considerar unas opciones del comando ls tales como:
+ - -R lista los archivos recursivamente
+ - -a muestra los archivos, incluidos los ocultos
+ - -lh convierte los tamanos de los formatos legible como MB, GB, TB
 
 ```
 $ cd 
@@ -72,7 +89,10 @@ Existen gestores de paquetes que se basdan en GUI tales como PackegeKit y Update
 > [!WARNING]
 > Es importante, siempre antes de hacer una actualizacion actulizar dependencias y actualizaciones disponibles de todas las aplicaciones con el comando `sudo apt update` enlista actualizaciones y `sudo apt upgrade` este ultimo actuliza los paquetes disponibles
 
-El comando para crear directorio es el siguiente:
+El comando para crear directorio cuenta con diferentes opciociones tales como 
+- -p: crea un directorio entre dos carpetas exsitentes  `musica/newfile/cancion1`
+- -m: establece los permisos de una carpeta tal como `mkdir m777 directory`
+- -v: imprime un mensaje al momento de crear directorio
 ```
 $ mkdir directory-name 
 ```
@@ -80,3 +100,12 @@ El comando para crear archivos es el siguiente dentro de la ruta actual de direc
 ```
 $ touch file-name
 ```
+Si quieres borrar archivos o directorios se spuede usar el comando rm con las siguientes variantes
+- -i: pide una confirmacion antes de borrar
+-  -f permite eliminar archivos sin confirmacion
+-  -r borra archivos y directorios recursivamente
+```
+$ rm  archive.txt
+```
+
+
