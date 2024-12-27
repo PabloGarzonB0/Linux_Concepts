@@ -1,0 +1,2 @@
+garbage: no se encontró la orden
+yuca_lica: no se encontró la orden
