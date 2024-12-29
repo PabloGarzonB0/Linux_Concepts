@@ -90,8 +90,8 @@ Existen gestores de paquetes que se basdan en GUI tales como PackegeKit y Update
 > Es importante, siempre antes de hacer una actualizacion actulizar dependencias y actualizaciones disponibles de todas las aplicaciones con el comando `sudo apt update` enlista actualizaciones y `sudo apt upgrade` este ultimo actuliza los paquetes disponibles
 
 El comando para crear directorio cuenta con diferentes opciociones tales como 
-- -p: crea un directorio entre dos carpetas exsitentes  `musica/newfile/cancion1`
-- -m: establece los permisos de una carpeta tal como `mkdir m777 directory`
+- -p: crea un directorio entre dos carpetas exisitentes  `musica/newfile/cancion1`
+- -m: establece los permisos de una carpeta tal como `mkdir -m 777 directory`
 - -v: imprime un mensaje al momento de crear directorio
 ```
 $ mkdir directory-name 
@@ -108,4 +108,4 @@ Si quieres borrar archivos o directorios se spuede usar el comando rm con las si
 $ rm  archive.txt
 ```
 
-
+[ CONTINUAR SECCION 2 >>]
