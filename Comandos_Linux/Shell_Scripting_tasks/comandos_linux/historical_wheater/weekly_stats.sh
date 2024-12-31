@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# Script para ver datos de synthetic_historical_accuracy
+# Script para normalizar los resultados de la precision semanl
 echo $(tail -8 synthetic_historical_fc_accuracy.tsv | cut -f6) > scratch.txt # No sobreescribe la informacion
 
 week_fc=($(echo $(cat scratch.txt))) # Creacion de nueva arreglo
