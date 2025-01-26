@@ -11,13 +11,14 @@ A continuacion se presentan comandos muy utiles para obtener informacion general
 | `ps `    |(process status) muestra informacion de los procesos actuales (ej. ps -ef)|
 | `top`     |(table of processes) muestra el uso de memoria del sistema en tiempo real  |
 | `df`    |(Disk Usage) muestra el uso de espacio de memorio (ej. df -h)|
+| `file documentName`    |Permite validar que tipo de archivo un archivo es, describe el tipo de contenido del archivo|
 
 Ahora por otro lado existe comandos muy comunes para aplicaciones de red tales como:
 
 | Comando | Descripcion                            |
 | ------- | ------------------------------------------------- |
 | `Hostname`     | Imprime el nombre de el sistema anfitrion actual    |
-| `ping [optiones] HOSTNAME/IP`     |    Envia una peticion ICMP de paquetes a la direccion indicada (ping -c 4 google.com)                |
+| `ping [optiones] HOSTNAME/IP`  |    Envia una peticion ICMP de paquetes a la direccion indicada (ping -c 4 google.com)                |
 | `ifconfig [INTERFACE]`     | Muestra o configura los parametros de la interfaz de red   |
 
 
@@ -31,7 +32,7 @@ Tu encontraras el  archivo en el directorio en el que te encuentras actualmente.
 $ find /home -type d -name MyFolder
 ```
 
-Si tu te encuentras dudoso de como utilizar un comando es muy util utilizar el comando `whatis [comando]`, este comando prove una breve descripcion del comando o programa
+Si tu te encuentras dudoso de como utilizar un comando es muy util utilizar el comando `whatis [comando]`, este comando provee una breve descripcion del comando o programa
 
 En el Shell de linux si tus comandos personales se estan extendiendo demasiado puedes utilizar `\` y presionar enter para proseguir los comandos pero verticalmente, como si fuera un salto de linea.
 
@@ -40,9 +41,41 @@ En el Shell de linux si tus comandos personales se estan extendiendo demasiado p
 En ocaciones escribir el mismo tipo de comando se vuelve algo tedioso debido a que se debe escribir reiteradas veces en la consola, con un alias es posible solucionar esa molestia. Crear un alias para los comandos largos y cotidianos nombrandolos de una manera simple y conveniente, por ejemplo:
 
 ```
-$ alias foobar= 'ls -la'
+$ alias foobar = 'ls -la'
 ```
 Ahora, en lugar de utilizar el comando completo solo utilizadomos foobar, pero ten encuenta que siempre que reinicies el sistema tus alias pueden ser borrados de la memoria asi que deben ser escritor permanentemente en la direccion: `~/.bashrc` o por otro lado, si deseas eliminar ese alias puede utilizar el siguiente comando:
 ```
 $ unalias foobar
 ```
+
+## COMANDO BASICOS PARA OPERACIONES DENTRO DE UN DIRECTORIO
+
+1. `cat` : Comando practico para visualizar en consola el contenido de un archivo o de multiples archivos 
+   ```bash
+   $cat dogfile.txt birdfile.csv
+   ```
+2. `less` : Indicado para  archivos  de texto  que son un poco largos, se utiliza en comandos para visualizar de manera mas comoda el contenido del archivo de forma paginada, se puede navegar por el archivo por paginas. Se pueden utilizar otros comandos dentro del archivo 
+    ```bash
+        $less /home/pete/Documents/textq
+    ```
+   Se pueden utilizar los siguiente comando dentro de la vista de less
+   - q , para salir de la vista de less
+   - g , Moverse del principio del archivo de texto
+   - G , mueve a el final del archivo de texto
+   - /search , puede buscar una palabra especifica dentro del documento de texto,
+   - h , si tu necesitas ayuda respecto a como usar el comando less
+  
+3. `history` : Smestra un historial de todos los comandos utilizados previamente en la seccion actual, es util para recordar comando que se hayan escrito y que no se recuerde como retornar a ellos `Ctrl + R` e otra manera de autocompletar un comando antes escrito.
+
+4. `cp` : Para realizar copias de un documento de otra ruta o directorio se utiliza este comando, care resaltar que existe multiples maneras de utilizarse, se pueden copiar multiples archivos y directorios considerando comodines ales como los siguientes,
+    - * para seleccionar todos los caracteres o alguno String
+    - ? usado para representar un caracter
+    - [] usado para representar un patron unico se hace dentro de corchetes
+Existen algunas opciones importantes del como `-r` que permite copiar recursivamente todo un directorio en otra ubicacion. Por otro lado, si copias un archivo en una ruta donde ya existe se sobrescribe accidentalmente el archivo de la ruta de destino, por eso es importante utilizar la opcion `-i` para solicitar la autorizacion de sobrescritura si se llega a presentar ese caso.
+
+    ```bash
+        $cp *.jpg /home/pete/pictures
+        $cp -r Pumpkin/ /home/pete/Documents
+        $cp -i mycoolfile /home/pete/Pictures
+    ```
+ 
