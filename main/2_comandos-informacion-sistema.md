@@ -26,6 +26,7 @@ Uno de los comando mas utiles y que se utiliza con frecuencia es el comando `fin
 
 ```
 $ find /home -name "*.jpg"
+$ find /home -iname "*.jpg" # no distingue entre mayuscular y minusculas
 ```
 Tu encontraras el  archivo en el directorio en el que te encuentras actualmente. Por otro lado, para hacer busquedas en archivos se pueden utilizar los siguientes comandos
 ```
@@ -63,9 +64,15 @@ $ unalias foobar
    - g , Moverse del principio del archivo de texto
    - G , mueve a el final del archivo de texto
    - /search , puede buscar una palabra especifica dentro del documento de texto,
-   - h , si tu necesitas ayuda respecto a como usar el comando less
+   - h , si  necesitas ayuda respecto a como usar el comando less
   
 3. `history` : Smestra un historial de todos los comandos utilizados previamente en la seccion actual, es util para recordar comando que se hayan escrito y que no se recuerde como retornar a ellos `Ctrl + R` e otra manera de autocompletar un comando antes escrito.
+<h2>
+<font color="blue">Importante: </font><br>
+</h2>
+
+> Los comandos de manipulacion como CP o MV necesitan de permisos de ejecucion para poder realizar cambios tanto desde el directorio de origen y el destino
+
 
 4. `cp` : Para realizar copias de un documento de otra ruta o directorio se utiliza este comando, care resaltar que existe multiples maneras de utilizarse, se pueden copiar multiples archivos y directorios considerando comodines ales como los siguientes,
     - * para seleccionar todos los caracteres o alguno String
@@ -78,4 +85,25 @@ Existen algunas opciones importantes del como `-r` que permite copiar recursivam
         $cp -r Pumpkin/ /home/pete/Documents
         $cp -i mycoolfile /home/pete/Pictures
     ```
- 
+
+5. `mv` : Para mover archivos o directorios de una direccion a otra considerando adicionalemente que se puede renombrar los archivos que se mueven
+   
+ ```bash
+        $mv oldfiel newfile              # renombre un archivo
+        $mv file2 /home/pete/Documents   # mover un archivo a una direccion diferente
+        $mv file_1 file_2 /somedirectory # mover varios archivos a otro direccion
+        $mv -b directory1 directory2     # puedes utilizar -b para crear un backup de un archivo y almacenarlo para
+                                         # posteriormente utilizarlo.
+ ```
+
+## Analizar archivos de texto plano se utilizando los siguiente comandos 
+
+| Comando | Descripcion                                     |
+| ------- | ------------------------------------------------|
+| `cat`     | Define la ruta donde se encuentra un comando  |
+| `more`     |imprime el contenido en paginas               |
+| `head`     |Imprime las primeras lineas de un archivo txt |
+| `tail`    | Imprime las ultimas lineas de un archivo txt  | 
+| `echo`     | Imprimir variables y texto en pantalla       |
+
+[ CONTINUAR SECCION 3 >>]

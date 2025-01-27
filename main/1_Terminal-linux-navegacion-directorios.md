@@ -35,10 +35,10 @@ Generalmente saber todas las posibilidades que trae consigo la terminal de linux
 | :boom: | Comando                                                                                                             |
 | ------ | :------------------------------------------------------------------------------------------------------------------ |
 | type   | Permite distinguir el tipo de comando que se utiliza (aveces son build-in o se encuentra en un fichero de comandos) |
-| help   | describe  con detalle la capacidad de un comando, cuenta con sus variantes como -s -m -d                            |
-| man    | instruccion practica para usar un comando                                                                           |
-| info   | describe  con detalle la capacidad de un comando                                                                    |
-| tldr   | Tutorial para usar un comando, caracteristicas del comando                                                           |
+| help   | describe  con detalle la capacidad de un comando, cuenta con sus variantes como -s -m -d                                                                                                                   |
+| man    | instruccion practica para usar un comando                                                                                                              |
+| info   | describe  con detalle la capacidad de un                                                                   comando                                                                                                              |
+| tldr   | Tutorial para usar un comando, caracteristicas del comando                                                                                                               |
 
 
 # Comandos principales para guiarse dentro de la terminal de linux 
@@ -104,8 +104,10 @@ Si quieres borrar archivos o directorios se puede usar el comando `rm` con las s
 - -i: pide una confirmacion antes de borrar
 - -f: permite eliminar archivos sin confirmacion
 - -r: borra archivos y directorios recursivamente
+  
 ```
 $ rm  archive.txt
+$ rmdir directory # Sirve para eliminar un directorio completo
 ```
 
 [ CONTINUAR SECCION 2 >>]
