@@ -4,14 +4,14 @@
 
 - [Resumen de comandos tipicos utilizados en el manejo de terminal de linux](#resumen-de-comandos-tipicos-utilizados-en-el-manejo-de-terminal-de-linux)
 - [Conceptos clave de Linux y Unix](#conceptos-clave-de-linux-y-unix)
-  - [unix](#unix)
-  - [linux](#linux)
+  - [Unix](#unix)
+  - [Linux](#linux)
   - [Distribuciones de linux](#distribuciones-de-linux)
   - [Los comandos](#los-comandos)
 
 # Conceptos clave de Linux y Unix
 Antes de considerar que es Linux y Unix es importante entender la importancia de los que es un sistema operativo. Este podria considerarse por las siglas "OS" y representa software que tiene la capacidad de administrar el hardware y cursos disponibles en una computadora
-## unix 
+## Unix 
 Es considerado familiar lejano de los sistemas operativos que a permitido el gestionamiento de las tareas consolidadas entra Hardware y Software. En principio fue creado como un sistema para un hardware especifico, la computadora PDP-7, pero luego sus bases fueron descritas con <em>C</em> para ser compatible con otras arquitecturas de software.
 - Oracle Solaris (Open Solaris)
 - FreeBSD
@@ -19,7 +19,7 @@ Es considerado familiar lejano de los sistemas operativos que a permitido el ges
 - IBM AIX
 - Apple macOs
   
-## linux
+## Linux
 Es un sistema operativo versatil Open Source y gratuito descendiente de el sistema operativo Unix, cuenta con caracteristicas unicas como:
 1. Versionado
 2. Seguro

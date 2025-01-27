@@ -64,3 +64,30 @@ O por otro lado queremos que cambiar el grupo propietario a "cliente" se introdu
     # -v (verbose) te da un diagnostico de los archivos que son procesados por el comando
     # -c (changes) solo proporciona informacion si los cambios fueron hechos
 ```
+# permisos de propietario
+Para oficializar los permisos de usuario sobre un archivo es necesario considerar sudo para contar con los permisos de administrador
+
+```bash
+    $ sudo chown patty myfiel 
+    # Para conceder permisos de grupo
+    $ sudo chgrp whales myfile
+    # Para conceder permisos de usuario y grupo al mismo tiempo
+    $ sudo chown patty:whales myfile
+```
+# Comandos para presentar fecha en consola
+Si deseas ver la ultima fecha de modificacion de un archivo se puede utilizar el siguiente comando 
+
+```bash
+    date -r note.txt
+```
+No solamente eso, sino que tambien puede utilizar date para formatear la forma en la que quiere ver la fecha considerando las diferentes indicadores para el dia, el mes , minutos, segundos, ect.
+
+```bash
+    date "+%j day of %y"
+    # %d indica el dia del mes
+    # %h indica la abreviatura de mes
+    # %m indica el mes
+    # %y indica el an"o
+    # %T indica el tiempo en formato de 23 horas
+    # %H indica la hora
+```
