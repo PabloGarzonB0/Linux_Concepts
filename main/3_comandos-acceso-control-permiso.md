@@ -3,11 +3,12 @@ La manera practica de ver los permisos que tienen los archivos es como se presen
 
  ```bash
         $ ls -l Desktop/
-        [output]
+
+    output
         d rwxr-xr-x 2 pete penguins 4096 Dec 1 11:45 .****
         # El orden del registro es: tipoArchivo | permisos | cantidad de enlaces fijos | usuario | grupo propietario | tamano | fecha ultima modificacion | nombre archivo
  ```
-El primer caracteri indica si el archivo es de tipo directorio (d) o por el caso contrao es de tipo archivo (-)
+El primer caracter indica si el archivo es de tipo directorio (d) o por el caso contrario es de tipo archivo (-)
 cada 3 bits se establecen los diferentes permisos para el **usuario**, luego para el **grupo** y finalmente para **otros**
 Los caracteres representan lo siguiente:
 
@@ -17,7 +18,7 @@ Los caracteres representan lo siguiente:
   
 ## 2. Modificacion de permisos
 
-Se pueden agragar o remover permisos mediante  los operadores + o - a continuacion se muestran algunos ejemplo de como se debe hacer
+Se pueden agregar o remover permisos mediante  los operadores + o - a continuacion se muestran algunos ejemplo de como se debe hacer
 
  ```bash
     chmod u+x myfile
