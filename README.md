@@ -50,18 +50,18 @@ Para entender mejor la estructura de Linux es importante observar las capas de l
 | Componente        | Funcion                                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | GUI               | Comunica y presenta al usuario final de forma visual las tareas ejecutadas por linux                                        |
-| Application layer | Utiliza aplicaiones como compiladores, Shell, lenguales, editores, aplicaiones de usuario entre otras herramientas          |
-| Operating System  | Gestiona y programa tareas internas del sistema operatio, asigna software a usuarios, detecta errores y administra archivos |
-| Kernel            | Puente entre el Hardware y el SO gestiona recursos de memoria, preocesos, controladores y seguridad                         |
-| Hardware          | Gestiona recursos de CPU, RAM, almacenamiento, pantalla y puesto I/O                                                        |
+| Application layer | Utiliza aplicaciones como compiladores, Shell, lenguales, editores, aplicaciones de usuario entre otras herramientas        |
+| Operating System  | Gestiona y programa tareas internas del sistema operativo, asigna software a usuarios, detecta errores y administra archivos|
+| Kernel            | Puente entre el Hardware y el SO gestiona recursos de memoria, procesos, controladores y seguridad                          |
+| Hardware          | Gestiona recursos de CPU, RAM, almacenamiento, pantalla y puerto I/O                                                        |
 
-Cuando se comienza a trabajar con la terminal de linux lo mas comun es encontrar la siguiente organizacion del directorio root
+Cuando se comienza a trabajar con la terminal de linux lo mas común es encontrar la siguiente organizacion del directorio root
 <div style="text-align: center;">
 <img src="Comandos_Linux\pictures_folder\Directorios-del-sistema-Linux.jpg" alt="Ejemplo de Imagen" width="500">
 </div>
 
 ## Los comandos
-Es una una sentencia logica que instruye a Linux OS realizar una accion o operacion, su estructura es la siguiente
+Es una sentencia logica que instruye a Linux OS realizar una accion o operacion, su estructura es la siguiente
 > $ comando   -opcion   argumentos
 - El comando representa la instruccion objetivo que se quiere realizar, 
 - la opcion representa una variante de la instruccion principal que se quiere realizar
@@ -78,4 +78,4 @@ Dentro  de la carpeta principal llamada <Strong>Main</Strong> se encontraran las
 |   5. |                                  Fundamentos de Shell Scripting |
 
 > [!NOTE]
-> Espero puedan servirte para tener una nocion clara del potencial y capacidad que tiene linux para sumergirte en el mundo de la informatica 
+> Espero puedan servirte para tener una nocion clara del potencial y capacidad que tiene linux para sumergirte en la informática 
