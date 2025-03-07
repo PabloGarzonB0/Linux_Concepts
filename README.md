@@ -32,7 +32,7 @@ Un tiempo despues aparece GNU como un conjunto de herramientas practicas del sis
 Linux se a expandido a operar en aplicaciones para diferentes tipos de dispositivos como dispotivos android, supercomutadoras, centros de datos, Microcontroladores para tareas IoT y servidores de cloud, entre otras.
 
 ## Distribuciones de linux
-Son muy conocidoas por que continen versiones puntuales de Linux OS, existen diferentes tipos de distros diferenciables por sus aplicaciones o comandos unicos que se pueden utilizar, algunas se presentan de tipo **GUI** o como **SERVER** alguna mas populares que otras pero estas se ven respaldadas por: `Soporta de la comunidad` y `Versiones de soporte a largo plazo (LTS)`   
+Son muy conocidas porque continen versiones puntuales de Linux OS, existen diferentes tipos de distros diferenciables por sus aplicaciones o comandos unicos que se pueden utilizar, algunas se presentan de tipo **GUI** o como **SERVER** alguna mas populares que otras pero estas se ven respaldadas por: `Soporta de la comunidad` y `Versiones de soporte a largo plazo (LTS)`   
 
 | Distribucion  | Funcion                                                                                  |
 | ------------- | ---------------------------------------------------------------------------------------- |
