@@ -32,7 +32,7 @@ Un tiempo despues aparece GNU como un conjunto de herramientas practicas del sis
 Linux se a expandido a operar en aplicaciones para diferentes tipos de dispositivos como dispotivos android, supercomutadoras, centros de datos, Microcontroladores para tareas IoT y servidores de cloud, entre otras.
 
 ## Distribuciones de linux
-Son muy conocidas porque continen versiones puntuales de Linux OS, existen diferentes tipos de distros diferenciables por sus aplicaciones o comandos unicos que se pueden utilizar, algunas se presentan de tipo **GUI** o como **SERVER** alguna mas populares que otras pero estas se ven respaldadas por: `Soporta de la comunidad` y `Versiones de soporte a largo plazo (LTS)`   
+Son muy conocidas porque continen versiones puntuales de Linux OS, existen diferentes tipos de distros diferenciables por sus aplicaciones o comandos unicos que se pueden utilizar, algunas se presentan de tipo **GUI** o como **SERVER** unas más populares que otras, pero estas se ven respaldadas por: `Soporte de la comunidad` y `Versiones de soporte a largo plazo (LTS)`   
 
 | Distribucion  | Funcion                                                                                  |
 | ------------- | ---------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ Son muy conocidas porque continen versiones puntuales de Linux OS, existen difer
 | Fedora        | Estable y confiable para operaciones generales                                           |
 | Arch Linux    | Comunmente utilizada para pruebas de seguridad, vulnerabilidades y riesgos de un sistema |
 
-Para entender mejor la estructura de Linux es importante observar las capas de la arquitectura del sistema operativo, es por ello que en la siguiente ilustracion se pueden visualizar 5 capas interconectadas que permiten la comunicacion desde al hardware hasta la interfaz de usuario
+Para entender mejor la estructura de Linux es importante observar las capas de la arquitectura del sistema operativo, es por ello que en la siguiente ilustracion se pueden visualizar las  5 capas interconectadas que permiten la comunicacion desde hardware hasta la interfaz de usuario
 <div style="text-align: center;">
 <img src="Comandos_Linux\pictures_folder\Linux_Architecture.jpg" alt="Ejemplo de Imagen" width="700">
 </div>
