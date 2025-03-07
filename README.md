@@ -28,8 +28,8 @@ Es un sistema operativo versatil Open Source y gratuito descendiente de el siste
 5. Realizacion de tareas en paralelo
 6. Portatil y de bajo consumo
 
-Un tiempo despues aparece GNU como un conjunto de herramientas practicas del sistema Unix, junto al desarrollo del nucleo de procesamiento linux-kernel, como pomponente central que permitiria la comunicaciones entra componentes de la arquitectura de una computadora, en definitiva linux es la esencia de GNU + Kernel linux + Tux (pinguino de linux).
-Linux se a expandido a operar en aplicaciones para diferentes tipos de dispositivos como dispotivos android, supercomutadoras, centros de datos, Microcontroladores para tareas IotT y servidores de cloud, entre otras.
+Un tiempo despues aparece GNU como un conjunto de herramientas practicas del sistema Unix, junto al desarrollo del nucleo de procesamiento linux-kernel, como componente central que permitiria la comunicacion entre componentes de la arquitectura de una computadora, en definitiva linux es la esencia de GNU + Kernel linux + Tux (pinguino de linux).
+Linux se a expandido a operar en aplicaciones para diferentes tipos de dispositivos como dispotivos android, supercomutadoras, centros de datos, Microcontroladores para tareas IoT y servidores de cloud, entre otras.
 
 ## Distribuciones de linux
 Son muy conocidoas por que continen versiones puntuales de Linux OS, existen diferentes tipos de distros diferenciables por sus aplicaciones o comandos unicos que se pueden utilizar, algunas se presentan de tipo **GUI** o como **SERVER** alguna mas populares que otras pero estas se ven respaldadas por: `Soporta de la comunidad` y `Versiones de soporte a largo plazo (LTS)`   
