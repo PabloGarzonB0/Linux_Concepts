@@ -80,7 +80,7 @@ Si deseas ver la ultima fecha de modificacion de un archivo se puede utilizar el
 ```bash
     date -r note.txt
 ```
-No solamente eso, sino que tambien puede utilizar date para formatear la forma en la que quiere ver la fecha considerando las diferentes indicadores para el dia, el mes , minutos, segundos, ect.
+No solamente eso, sino que tambien puede utilizar date para formatear la forma en la que quiere ver la fecha considerando las diferentes indicadores para el dia, el mes, minutos, segundos, ect.
 
 ```bash
     date "+%j day of %y"
@@ -91,3 +91,5 @@ No solamente eso, sino que tambien puede utilizar date para formatear la forma e
     # %T indica el tiempo en formato de 23 horas
     # %H indica la hora
 ```
+
+# Encontrar un archivo dentro de un directorio 
