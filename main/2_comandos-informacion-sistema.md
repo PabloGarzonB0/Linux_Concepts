@@ -11,24 +11,22 @@ A continuacion se presentan comandos muy utiles para obtener informacion general
 | `ps `    |(process status) muestra informacion de los procesos actuales (ej. ps -ef)|
 | `top`     |(table of processes) muestra el uso de memoria del sistema en tiempo real  |
 | `df`    |(Disk Usage) muestra el uso de espacio de memorio (ej. df -h)|
-| `file documentName`    |Permite validar que tipo de archivo un archivo es, describe el tipo de contenido del archivo|
+| `file documentName`    |Permite validar que tipo de archivo es, describe el tipo de contenido del archivo|
 
-Ahora por otro lado existe comandos muy comunes para aplicaciones de red tales como:
+Ahora, por otro lado existe comandos muy comunes para aplicaciones de red tales como:
 
 | Comando | Descripcion                            |
 | ------- | ------------------------------------------------- |
 | `Hostname`     | Imprime el nombre de el sistema anfitrion actual    |
 | `ping [optiones] HOSTNAME/IP`  |    Envia una peticion ICMP de paquetes a la direccion indicada (ping -c 4 google.com)                |
 | `ifconfig [INTERFACE]`     | Muestra o configura los parametros de la interfaz de red   |
-
-
 Uno de los comando mas utiles y que se utiliza con frecuencia es el comando `find` este comando facilita encontrar archivos y directorios con facilidad en rutas especificas
 
 ```
 $ find /home -name "*.jpg"
 $ find /home -iname "*.jpg" # no distingue entre mayuscular y minusculas
 ```
-Tu encontraras el  archivo en el directorio en el que te encuentras actualmente. Por otro lado, para hacer busquedas en archivos se pueden utilizar los siguientes comandos
+Tu encontraras el archivo en el directorio en el que te encuentras actualmente. Por otro lado, para hacer busquedas en archivos se pueden utilizar los siguientes comandos
 ```
 $ find /home -type d -name MyFolder
 ```
@@ -66,16 +64,16 @@ $ unalias foobar
    - /search , puede buscar una palabra especifica dentro del documento de texto,
    - h , si  necesitas ayuda respecto a como usar el comando less
   
-3. `history` : Smestra un historial de todos los comandos utilizados previamente en la seccion actual, es util para recordar comando que se hayan escrito y que no se recuerde como retornar a ellos `Ctrl + R` e otra manera de autocompletar un comando antes escrito.
+3. `history` : Muestra un historial de todos los comandos utilizados previamente en la seccion actual, es util para recordar comando que se hayan escrito y que no se recuerde como retornar a ellos `Ctrl + R` es otra manera de autocompletar un comando antes escrito.
 <h2>
 <font color="blue">Importante: </font><br>
 </h2>
 
-> Los comandos de manipulacion como CP o MV necesitan de permisos de ejecucion para poder realizar cambios tanto desde el directorio de origen y el destino
+> Los comandos de manipulacion como CP o MV necesitan de permisos de ejecución para poder realizar cambios tanto desde el directorio de origen y el destino
 
 
-4. `cp` : Para realizar copias de un documento de otra ruta o directorio se utiliza este comando, care resaltar que existe multiples maneras de utilizarse, se pueden copiar multiples archivos y directorios considerando comodines ales como los siguientes,
-    - * para seleccionar todos los caracteres o alguno String
+4. `cp` : Para realizar copias de un documento de otra ruta o directorio se utiliza este comando, cabe resaltar que existe multiples maneras de utilizarse, se pueden copiar multiples archivos y directorios considerando comodines tales como los siguientes,
+    - * para seleccionar todos los caracteres o algún String
     - ? usado para representar un caracter
     - [] usado para representar un patron unico se hace dentro de corchetes
 Existen algunas opciones importantes del como `-r` que permite copiar recursivamente todo un directorio en otra ubicacion. Por otro lado, si copias un archivo en una ruta donde ya existe se sobrescribe accidentalmente el archivo de la ruta de destino, por eso es importante utilizar la opcion `-i` para solicitar la autorizacion de sobrescritura si se llega a presentar ese caso.
