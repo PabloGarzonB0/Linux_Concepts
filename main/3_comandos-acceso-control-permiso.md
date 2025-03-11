@@ -92,3 +92,21 @@ No solamente eso, sino que tambien puede utilizar date para formatear la forma e
     # %T indica el tiempo en formato de 23 horas
     # %H indica la hora
 ```
+
+# Busqueda  de archivos
+Para buscar ficheros y directorios dentro arbol de archivos se utiliza muy a menudo para buscar archivos de diferente extension, reconocido por la palabra clave `find` mantiene la siguiente estructura: find {ruta del archivo} {-type} {-name} {"nombre especifico del archivo"}
+
+- Ejemplo 1
+```bash   
+    find /home -name puppies.jpg
+```
+- Ejemplo 2
+```bash   
+    find . -name "a.txt"
+    find . -iname "a.txt" # No se distingue entre mayusculas y minusculas
+```
+- Ejemplo 3 : busqueda de archivos vacios
+```bash   
+    find ruta -type f -empty
+    find ruta -type d -empty
+```
