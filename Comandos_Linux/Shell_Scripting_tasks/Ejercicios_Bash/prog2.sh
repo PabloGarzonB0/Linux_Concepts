@@ -12,7 +12,7 @@ e=`expr $suma "/" 2`
 if [ $e -ge 13 ]
 then
     echo "curso: $a"
-    echo "Alumno aprobado satisfactoriamente"
+    echo "Alumno aprobado satisfactoriamente: $e"
 else
     echo "curso: $a"
     echo "Alumno desaprobado: $e"
