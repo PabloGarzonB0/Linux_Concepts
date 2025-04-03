@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landpage_task_shell</title>
+</head>
+<style>
+    /* CSS styles */
+    body {
+        text-align: center;
+        padding-top: 150px;
+        font-family: Arial, sans-serif;
+        background-color: #0d0d0c;
+    }
+
+    h1 {
+        color: #19cbd2;
+        font-size: 50px;
+        text-shadow: 2px 2px 4px #000;
+    }
+</style>
+
+<body>
+    <h1 id="mensagge">Interactive Menu - System Operating tasks</h1>
+    <button onclick="changeText()"> Change text </button>
+    <script>
+        // JavaScript code
+        function changeText() {
+            var message = document.getElementById("mensagge")
+            var newText = prompt("Enter a new text:")
+            text.innerHTML = newText;
+        }
+    </script>
+</body>
+
+</html>
