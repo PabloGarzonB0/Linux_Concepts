@@ -8,15 +8,29 @@ Como prueba de concepto (POC), solamente se requerira hacer una unica estacion y
 
 ![Servicio_meteriologico](Imagenes/Servicio_metereologico.png)
 
+El proyecto se encuentra estructurado de la siguiente manera, todos los archivos se encuentra disponibles en la carpeta Prevision_metereologica,
 
+```bash
+Prevision_meteorologica/
+│
+├── Imagenes/
+│   ├── Servicio_metereologico.png
+│   └── Reporte_clima.png
+│
+├── rx_poc.log               # Registro tabular diario de temperaturas
+├── rx_poc.sh                # Script para obtener y registrar datos
+├── fc_accuracy.sh           # Script para calcular precisión de pronósticos
+├── historical_fc_accuracy.tsv # Archivo con historial de precisión
+└── weekly_stats.sh          # Script para resumen semanal
 
+```
 
 # Fuentes de datos
 Para implementar este proyecto meteorologico se proporcionara la fuente de recursos https://wttr.in, servicio web que proporciona informacion del tiempo en un formato simple de leer.
 
 La informacion obtenida mediante el comando `curl wttr.in/casablanca` extrae los datos meteorologicos de la siguiente manera
 
-## Descripcion general
+# Descripcion general
 El reporte climatico en este proyecto permite desarrollar los siguientes aspectos ligados a la creacion scripting en shell, las actividades que involucra se describen a continuacion:
 
 - Descargar datos meteorologicos en bruto
