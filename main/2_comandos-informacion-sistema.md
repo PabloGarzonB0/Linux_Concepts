@@ -12,6 +12,7 @@ A continuacion se presentan comandos muy utiles para obtener informacion general
 | `top`     |(table of processes) muestra el uso de memoria del sistema en tiempo real  |
 | `df`    |(Disk Usage) muestra el uso de espacio de memorio (ej. df -h)|
 | `file documentName`    |Permite validar que tipo de archivo es, describe el tipo de contenido del archivo|
+| `apropos "comand term"`    |Comando útil para enlistar todos los comandos asociados a la palabra descrita|
 
 Ahora, por otro lado existe comandos muy comunes para aplicaciones de red tales como:
 
