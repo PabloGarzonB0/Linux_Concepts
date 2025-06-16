@@ -110,3 +110,25 @@ Para buscar ficheros y directorios dentro arbol de archivos se utiliza muy a men
     find ruta -type f -empty
     find ruta -type d -empty
 ```
+## Comandos para movilidad dentro de la consola de comandos
+
+| Comando | Descripcion                                     |
+| ------- | ------------------------------------------------|
+| `ctrl + A `     | Irse al principio del texto  |
+| `ctrl + E `     |Irse al final del texto       |
+| `ctrl + l`     |Limpia la consola |
+| `ctrl + p`    | Trae el ultimo comando utilizado  | 
+| `ctrl + R`     | Busqueda recursiva de un comando |
+| `ctrl + b`    | Ir hacia atras  | 
+| `ctrl + f`    | Ir hacia adelante |
+| `ctrl + .`    | referencia el comando anterior  | 
+| `$`     | Utiliza el ultimo comando empleado |
+| `ctrl + k`    | Sirve para cortar el texto que tenemos enfrente  | 
+| `ctrl + u`     | Borra la linea anteiorr a la posciion actual |
+| `ctrl + c`    | Interrumpe la ejecucion de un programa  | 
+| `ctrl + D`     | Cierra la shell actual |
+| `ctrl + T`    | cambia los caracteres de posicion  | 
+
+
+
+
