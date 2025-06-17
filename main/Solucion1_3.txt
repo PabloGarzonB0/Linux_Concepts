@@ -1,0 +1,11 @@
+Ejercicios:
+    1. find  /  -name ls 2> /dev/null
+
+    2. find / -name firefox -type d 2 > /dev/null
+
+    3. find / -name shadow ! -path "/snap/*" -ls 2> /dev/null 
+
+
+
+    * -path "/snap/*"   -> Excluye los resultados provenientes de es ruta
+    * 2 > /dev/null     -> Elimina todos los errores de permiso denegado 
