@@ -136,5 +136,5 @@ Utilizar el comando find para buscar los siguiente ficheros dentro de Linux
 2. Buscar directorios de configuracion del programa firefox que viene instalado por defecto en Ubuntu
 3. Buscar el usuario propietario del fichero shadow que se encuentra en algun lugar del sistema de ficehros de Linux excluyendo apellos ficheros shadow qeu se encuentrandentro de la ruta /snap
 
-La solucion a este problema lo encuentra aqui. [sol](/main/Solucion1_3.txt)
-
+La solucion a este problema lo encuentra aqui. [solucion](/main/Solucion1_3.txt)
+u
