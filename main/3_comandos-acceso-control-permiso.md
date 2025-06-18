@@ -141,3 +141,23 @@ La solucion a este problema lo encuentra aqui. [solucion](/main/Solucion1_3.txt)
 
  Enlace suave ->  Se utiliza para hacer un enlace de referencia a un fichero    ej: ln -s  [ruta a referencia] [nombre_ruta], si se borra el archivo principal los enlaces se pueden romper 
  Enlace duro -> Se utiliza para hacer un acceso directo a los datos de una direccion dada ej: ln [ruta a donde apunta] [nombre ruta]
+
+ ## Redireccoin I/O 
+ Se puede apregar contenido a un archivo con una fucnio de direccionameinto (E/S) permite enviar la inforamcion de la linea de comandos a archovs,dispositivos y otros campos.
+
+ (I/O): rutos que se utilizan como interfaces para los archivos
+ - STDIN : Entrada estandar de comandos
+ - STDOUT :Infomacion que muestra el comando (salida estandar)
+ - STDERR :Error estandar cuando no se ejecuta un comando correctamente,
+  
+Direccionar un archivo en un sistema utilizamos:
+'> : para generar un nuevo archivo'
+'>> : sobre escribe un archivo'
+
+En esta situacion la salida de un comando que se mostraria en colosa se guardaria en un archivo utilizando la redireccion . y >>, es importante tambien tener en cuenta que usar 2> y 2>> permite guardar los errores obtenidos dentro de esos archivos
+
+Ejemplo:
+```bash
+    ls -lah > salida_ls.txt
+    echo "$(ls)" >> salida_ls.txt
+```
