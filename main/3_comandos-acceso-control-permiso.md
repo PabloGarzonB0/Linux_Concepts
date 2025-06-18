@@ -161,3 +161,5 @@ Ejemplo:
     ls -lah > salida_ls.txt
     echo "$(ls)" >> salida_ls.txt
 ```
+
+Un aspecto importante a tener en cuenta es el file - descriptor que es el numero asociado a las rutas donde se encuentran las interfaces stdin[0], stdout[1], stderr[2], este descriptor de ruta permite aclarar por que camino se va a dirigir la salida de la consola.

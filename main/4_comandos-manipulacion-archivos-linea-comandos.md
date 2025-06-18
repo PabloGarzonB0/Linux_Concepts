@@ -97,3 +97,10 @@ Las comillas simples se pueden combinar con las commillas dobles para poder en l
     echo "esto es una expansion $(which cat), y esto no es una expansion \$(which cat)"
 ```
 utilizar el parametro de escape o -e permite obtener utilizar los caracteries especiales sobre el texto
+
+
+Se pueden redireccionar datos de texto a 2 rutas diferentes utilizando la siguiente expresion:
+```bash 
+    ls -lah > ls-salida.txt 2>&1
+    ls -lah  &> ls-salida.txt  # Envia ambas salidas a una misma salida
+```
