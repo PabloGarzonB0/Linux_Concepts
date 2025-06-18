@@ -137,4 +137,7 @@ Utilizar el comando find para buscar los siguiente ficheros dentro de Linux
 3. Buscar el usuario propietario del fichero shadow que se encuentra en algun lugar del sistema de ficehros de Linux excluyendo apellos ficheros shadow qeu se encuentrandentro de la ruta /snap
 
 La solucion a este problema lo encuentra aqui. [solucion](/main/Solucion1_3.txt)
-u
+
+
+ Enlace suave ->  Se utiliza para hacer un enlace de referencia a un fichero    ej: ln -s  [ruta a referencia] [nombre_ruta], si se borra el archivo principal los enlaces se pueden romper 
+ Enlace duro -> Se utiliza para hacer un acceso directo a los datos de una direccion dada ej: ln [ruta a donde apunta] [nombre ruta]

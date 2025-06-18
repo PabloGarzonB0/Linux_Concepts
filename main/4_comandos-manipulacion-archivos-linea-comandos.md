@@ -62,12 +62,13 @@ Se pueden realizar operaciones aritmeticas pero se debe tener en cuenta que esta
     echo fichero{1..100}.txt
 ```
 ![alt text](image.png)
-
+ ### EXPANSION DE LA SHELL
 Tal que la expansion en la shell es una poderosa herramienta que permite crear de forma automatica archivos y elementos. Podriamos crear carpetas que se separen por anio y agregar cada los 12 meses para almecenar informacion temporal.
 
 ```bash
     mkdir {2020..2024}-{01..12}
 ```
+### SUSTITUCION DE COMANDOS CON $  o `
 Se pueden utilizar comandos de sustitucion para tomar la salida de un comando como entrada para el siguiente, en este situacion se ejecuta el comando entre parentesis para ser empleado en encomandos un poco mas complejos, en el siguiente ejemplo a continuacion se demuestra
 
 ```bash
@@ -82,5 +83,17 @@ Se pueden utilizar comandos de sustitucion para tomar la salida de un comando co
     echo 'Este es un texto compredo con    espacios'
 ```
 
-`""` 
+`""`  va a provocar que todos los caracteres especiales pierdan el significado excepcion de $ \ `, esto quiero decir que cuando se utiliza "" no expande nada de la expresion que este dentro de ella a menos que se utilicen las excepciones.
 
+`$` funciona como comando de expansion debido a que lo que este dentro de el va realizar una operacion.
+```bash
+    echo "La ruta de cat es: $(which cat)"
+```
+Las comillas simples se pueden combinar con las commillas dobles para poder en la salida de consola las comillas en pantalla.
+
+`\` este comando se puede utilizar para quitarle el significa especial a una expresion tal como lo muestra la siguiente expresion:
+
+```bash
+    echo "esto es una expansion $(which cat), y esto no es una expansion \$(which cat)"
+```
+utilizar el parametro de escape o -e permite obtener utilizar los caracteries especiales sobre el texto
