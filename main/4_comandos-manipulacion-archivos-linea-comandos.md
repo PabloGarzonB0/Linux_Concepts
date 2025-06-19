@@ -119,3 +119,42 @@ La tambien llamada canalizacion se encarga de conectar el stdout de un comando c
 ```
 Hay que tener en cuenta que en ocaciones la secuencia de comandos implementada no se alinea al objetivo esperado, esto quiere decir que algunos comandos no coinciden para que su salida sea la entrada del siguiente linea.
 
+### Filtro de resultados
+Utilizamos el comando grep para hacer busqueda de patrones dentro de una ruta o archivo, en esta ocasion podremos utilizar el comando grep:
+
+```bash
+    grep pgarzon /var/log/auth.log  # Lineas que coinciden on el patron pgarzon dentro de la ruta descrita
+    ls /usr/bin | sort | uniq | grep zip
+
+    ls /usr/bin | sort | tee fichero_sort.txt | uniq | grep zip
+```
+
+
+### Ejercicio con pipelines
+Completar las actividades utilizando las herramientas de filtrado y busqueda de inforamcion que se han presentado en los temas anteriores:
+
+1. Mostrar por pantalla todos los archivos y directorios que se tienen en el directorio de trabajo, organizado por tamano
+2. Crear un nuevo fichero en Linux ejecutando el siguiente comando: echo -e "rojo,1,coche,madrid\nazul,4,moto,mexico\namarillo,2,bicicleta,paris\nverde,6,avion,roma" > fichero.csv
+
+Ordenar el fichero por el segundo campo teniendo en cuenta que los campos estan separados por el delimitador ,
+
+3. Mostrar por pantalla la linea 55 del fichero auth.log que se encuentra en /var/log
+
+SOLUCION:
+1. ls -l ~ | sort -h -k5
+
+2.  sort -t ',' -nk2 fichero.csv
+
+3. head -n 55 /var/log/auth.log | ln | tail -1
+
+
+Existen otro tipo de comandos interesantes como sed que se utilizan principalmente para reemplazar texto de un fichero. Sin embargo, puede utilizarse en combinacion con otros comandos para reemplazar o sustituir una cadena de texto en un fichero, reemplazar una cadena de texto en una linea determinada de un fichero y achadir caracter al comiento de cada linea de un fichero.
+
+
+## Permisos y usuarios en linux:
+
+
+
+
+
+
