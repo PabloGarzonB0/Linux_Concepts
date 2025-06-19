@@ -104,3 +104,18 @@ Se pueden redireccionar datos de texto a 2 rutas diferentes utilizando la siguie
     ls -lah > ls-salida.txt 2>&1
     ls -lah  &> ls-salida.txt  # Envia ambas salidas a una misma salida
 ```
+
+La ruta `/dev/null` (fichero especial para volcar todos los mensajes de error ) es una direccion donde todo lo que se envie sera eliminado del sistema.
+
+Otro dato interesenta es que siempre la redireccion pasa primero por el fichero de stdin hasta stdout, pero teniendo en cuenta que si no pongo un parametro de entrada, por ejemplo cat > archovot.txt  espera a que ingrese por consola el texto que sera almacenado en el archivo final, en un sentido contrario se puede hacer la redireccion a stdin, tal que se puede imprimir en consola lo que se encuentra almacenado en un archivo de texto cat < nuevofichero.txt
+
+
+## Pipelines
+
+La tambien llamada canalizacion se encarga de conectar el stdout de un comando con el stdin del siguiente comando, esto quiere decir que se direcciona a un siguiente comando la entrada de un valor. Ejemplo:
+
+```bash
+    ls -l /usr/bin | sort | unique | less   
+```
+Hay que tener en cuenta que en ocaciones la secuencia de comandos implementada no se alinea al objetivo esperado, esto quiere decir que algunos comandos no coinciden para que su salida sea la entrada del siguiente linea.
+
