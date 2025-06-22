@@ -153,8 +153,15 @@ Existen otro tipo de comandos interesantes como sed que se utilizan principalmen
 
 ## Permisos y usuarios en linux:
 
+En linux, nos encontramos con los conceptos de usurio y grupo, elementos que gestionan los permisos y seguridad de un sistema.
+Los usuarios se utilizan para administrar y tomar permisos sobre archivos y recursos de forma local.
+Los grupos permiten aignar y administrar permisos de manera global a varios usuarios a mismo tiempo, facilitando la gestion cuando varias personas necesitan accesos similar a cierto recurso.
 
-
+```bash
+    cat /etc/passwd   # Informacion de los usurios que existen
+    cat /etc/group    # Muestra los grupos que existen
+```
+Los ficheros mas importantes siempre pertenecen al usuario root, y no se pueden hacer cambio sobre esos archivos.
 
 
 
