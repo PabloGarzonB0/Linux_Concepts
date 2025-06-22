@@ -161,7 +161,42 @@ Los grupos permiten aignar y administrar permisos de manera global a varios usua
     cat /etc/passwd   # Informacion de los usurios que existen
     cat /etc/group    # Muestra los grupos que existen
 ```
-Los ficheros mas importantes siempre pertenecen al usuario root, y no se pueden hacer cambio sobre esos archivos.
+Los ficheros mas importantes siempre pertenecen al usuario root, y no se pueden hacer cambio sobre esos archivos. A menos que accedamos como superadministrador o usuario root  mediante  `sudo su`.
+
+su: Cambia de usuario (normalmente root), pide la contraseña del usuario destino.
+sudo: Ejecuta un comando como root, pide tu propia contraseña.
+sudo su: Da una shell de root, usando contraseña si tiene permisos sudo.
+
+La mascara permite configurar los permisos por defecto que se establecen para los usuarios, grupos y otros. Se puede configurar en forma octal tal de la siguietne manera
+
+```bash
+    umask 0000   # Modificarse para dar permisos por defecto a todos los archivos 
+    umask 0006   # Da lectura y escrituro para el grupo de otros.
+```
+
+### Permisos especiales
+El setuid es un permiso especial en sistemas Linux/Unix que se aplica a **archivos ejecutables**. Cuando un archivo tiene el bit setuid activado, cualquier usuario que ejecute ese arhicho lo hara con los permisos del propietario del archivo.
+
+Como funciona?
+Si un programa tiene el bit setuid y es propietario del root, cualquier usuario que lo ejecute, temporalmente tendra permisos de root solo mientras se ejecuta ese programa.
+
+Podemos activarlo de la siguiente manera:
+```bash
+    chmod u+s archivo  # De otra manera chmod 4770 archivo
+```
+
+El setgid (set group ID) permiso especial de linuz que se aplica sobre **archivos ejecutables como directorios** . Se emplea cuando un arachivo ejecutable tiene el bit setgid activado cualquier usuario que lo ejectute lo hara con los permisos del grupo propietario del archivo, si en el caso de un directorio se encuantra activado, todos los archivos y subdirectorios dentro del directorio tendran permisos
+
+Podemos activarlo de la siguiente manera:
+
+```bash
+    chmod g+s archivo_o_directorio # De otra manera chmod 2770 archivo
+```
 
 
+El sticky bit permiso especial. Cuando el sticky bit está activado en un directorio, solo el propietario de un archivo (o el usuario root) puede borrar o renombrar archivos dentro de ese directorio, aunque otros usuarios tengan permisos de escritura sobre el directorio.
 
+Esto es muy útil en directorios como /tmp, donde muchos usuarios pueden crear archivos, pero no deberían poder borrar o modificar los archivos de otros.
+```bash
+    chmod 1777 nombre_del_directorio  # chmod +t nombre_del_directorio
+```
