@@ -200,3 +200,21 @@ Esto es muy útil en directorios como /tmp, donde muchos usuarios pueden crear a
 ```bash
     chmod 1777 nombre_del_directorio  # chmod +t nombre_del_directorio
 ```
+
+El comando **su** se utiliza para poder emplear  la shell con otro usuario, en esta ocasion podemos ingresar a cualquier usuario que tengamos disponible.
+
+**sudo** es un comando que nos va a servir para ejecutar otros comandos con privilegios de administrador, hay que tener en cuenta que este comando puede  realizar operaciones de bajo nivel en el sistema operativo y que ofrece accesibilidad a usuarios que se encuentran dentro del archivo sudoers.
+
+```bash
+    sudo visudo  # Ingresa el archivo de privilegios de usuario
+```
+
+Para la seguridad de los usuarios se recomienda dar permisos de usuario creando los grupos y posteriormente agregando los usuarios a los grupos con niveles de permiso.
+
+Para agregar los usuarios de los grupos se utiliza la siguiente sintaxis:
+
+```bash
+    sudo usermod -aG sudo testuser # donde se considera sudo usermod -aG [grupo] [usuario]
+```
+Asi como se puede observar a continuacion en pantalla  se agrega el usuario.
+![Salida en terminal](./agregando_usuario_grupo.png)
