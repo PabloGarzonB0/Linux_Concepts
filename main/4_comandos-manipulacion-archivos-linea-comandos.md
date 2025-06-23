@@ -215,6 +215,22 @@ Para agregar los usuarios de los grupos se utiliza la siguiente sintaxis:
 
 ```bash
     sudo usermod -aG sudo testuser # donde se considera sudo usermod -aG [grupo] [usuario]
+
+    adduser newUserContat # Wrapper, interfaz del comando useradd
+    useradd newUseContat  # Comando de bajo nivel
+    addgroup newGroup  # wrapper, interfaz del comando groupadd
+    groupadd newGropu # comando de bajo nivel para agregar un nuevo grupo
+    sudo -a -G newgroup newuser # Este comando sirve para agregar un un grupo al usuario
+    sudo usermog -g newgroup newuser # Cambio de grupo primario de un usuario
+    # Podemos cambiar la ruta donde se ubica un usuario
+    sudo usermod -d /home/pgarzon newuser2
+    # Cambiar uid de los usuario
+    sudo usermod -u 250 newuser2
 ```
+
+para observar todos los grupos y usuarios que tenenmos en el sistemas podemos buscarlos en las rutas /etc/passwd y /etc/group
+
 Asi como se puede observar a continuacion en pantalla  se agrega el usuario.
 ![Salida en terminal](./agregando_usuario_grupo.png)
+
+ 
