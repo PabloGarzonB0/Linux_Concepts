@@ -233,4 +233,20 @@ para observar todos los grupos y usuarios que tenenmos en el sistemas podemos bu
 Asi como se puede observar a continuacion en pantalla  se agrega el usuario.
 ![Salida en terminal](./agregando_usuario_grupo.png)
 
- 
+La asignacion de un usuario o grupo a un archivo puede realizarse  de la siguiente manera:
+
+ ```bash
+    sudo chown [usuario][grupo_propietario] archivo.txt
+    sudo chgrop sudo preuba.txt  # Comando antiguo para el cambio de propietario
+ ```
+
+Algo importante es darnos cuenta que los comandos se encuentran almacenados como ejecutables dentro del directorio de archivos de la ruta principal, la que son consultados en la ruta $PATH y posteriormente son traidos y aplicados sobre los argumentos ingresados.
+
+## PROCESOS EN LINUX
+Linux es un sistema multitarea, es decir que es capaz de realizar multiples procesos no en forma paralela sino secuencial tan rapido que refleja los procesos como si fueran hechos al mismo tiempo. 
+
+En el directorio /proc podemos observar los procesos que se encuentran activos, los procesos  funcionan como un directorio dinamico que tiene carpetas que se agregan y se eliminan a medida que realizamos operaciones dentro del sistema operativo.
+
+
+
+
