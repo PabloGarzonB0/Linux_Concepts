@@ -3,7 +3,7 @@
 while true; 
 do
     clear
-    echo "Menu de mantenimeinto de archivo"
+    echo "Menu de mantenimiento de archivo"
     echo "1. Verifica si un archivo existe"
     echo "2. Crear un archivo"
     echo "3. Eliminar un archivo"

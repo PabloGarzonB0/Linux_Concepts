@@ -247,6 +247,28 @@ Linux es un sistema multitarea, es decir que es capaz de realizar multiples proc
 
 En el directorio /proc podemos observar los procesos que se encuentran activos, los procesos  funcionan como un directorio dinamico que tiene carpetas que se agregan y se eliminan a medida que realizamos operaciones dentro del sistema operativo.
 
+se pueden realizar muchas operaciones dentro de linux y estas pueden ser establecidas en primer plano o en segundo plano. En segundo plano la terminal se detiene para no realizar muchos mas procesos, mientras que en primer plano la terminal queda unicamente disponible para el proceso que se queda desarrollando.
 
+```bash
+    bg %[identificador pid]  # comando para operaciones segundo plano
+    fg %[identificador pid]  # comando para operaciones primer plano
 
+```
+###  Sen'ales en linux
+Los programas en linux se mantienen pendiente de las senales que reciben del SO para realizar algun tipo de actuacion. 
 
+Utilizado el comando **kill** podremos enviar senales a procesos si identificamos el pid y adicionalmente agregamos el tipo de senal que deseamos agregar.
+
+```bash
+    kill -20 40005  # Detiene el proceso de el ejecutable que se tiene de momento
+    kill -18 40005  # Reanuda el proceso que se encontraba congelado
+    # Otro ejemplo particular es mediante los argumentos -TOP y -CONT
+```
+
+Todas las senales del sistemas de pueden observar con el comando kill  -l
+
+### Init, deminios y servicios 
+
+```bash
+    init.d, systemctl, service
+```   
