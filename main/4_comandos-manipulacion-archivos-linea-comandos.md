@@ -301,3 +301,21 @@ Sniffer : Realiza una copia de trafico de red para analizarlo y visualizar el ti
 Comandos utilizados para transferir datos desde o hacia un servidor, es compatible con multiples protocolos de comunicacion tal como DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS,IMAP, LDAP, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTPS, TELNET or TFTP.
 
 Util para realizar peticiones a una API, extraer informacion del head de una api.
+la principal diferencia de utilizar estos dos comandos es que **curl**  bloquea la pantalla hasta terminar proceso, no se puede realizar otro tipo de accion pero es util para utilizar los comandos de expansion o combinaciones regex. Por otro lado, wget permite descargar ficheros de manera no interactiva, es decir que se puede realizar en segundo plano mientras se realizan otras tareas. Para ver los procesos de descarga se peude utilizar el comando
+
+```bash
+    tail wget-log
+```
+
+Podemos realizar conexiones a mv de forma remota a portir del comando SSH, un protocolo de seguridad que permite la conexion remota mediante la shell. la sintaxis para conectarse a una maquina remota es la siguiente:
+```bash
+    ssh nombreUsuario@direccionIP  # Ten en cuenta la contrasena porque luego se pide
+```
+
+Tenemos el comando **ss**  comando utilizado para visualizar las siguiente conexiones y configurar sockets, se pueden observar detalles respecto al estado, direccion y proceso que se estan realizando (conexiones activas, en escucha o terminadas)
+
+## Gestion de paquetes en linux
+
+Corresponde  al metodo de instalar y mantener el software del sistema Linux, corresponde con uno de los aspectos mas importantes y diferenciadores de una distribucion de linux. El software de linux cambia constantemente, por lo tanto el codigo fuente se compila y se intala cada vez que se realiza una actualizacion. Los sistemas gestores de paquetes son:
+- Estilo Debian (.deb) : para distribuciones tipo debian, ubuntu, lunux Mint, Raspbian
+- Estilo ReadHat (.rpm) Fedora, CentOs, RedHat, OpenSuse
