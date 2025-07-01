@@ -228,7 +228,7 @@ Para agregar los usuarios de los grupos se utiliza la siguiente sintaxis:
     sudo usermod -u 250 newuser2
 ```
 
-para observar todos los grupos y usuarios que tenenmos en el sistemas podemos buscarlos en las rutas /etc/passwd y /etc/group
+para observar todos los grupos y usuarios que tenemos en el sistemas podemos buscarlos en las rutas /etc/passwd y /etc/group
 
 Asi como se puede observar a continuacion en pantalla  se agrega el usuario.
 ![Salida en terminal](./agregando_usuario_grupo.png)
@@ -265,9 +265,29 @@ Utilizado el comando **kill** podremos enviar senales a procesos si identificamo
     # Otro ejemplo particular es mediante los argumentos -TOP y -CONT
 ```
 
-Todas las senales del sistemas de pueden observar con el comando kill  -l
+Todas las senales del sistemas de pueden observar con el comando kill  -l, se debe tener en cuenta que las sen'ales realizan diferentes tipos de acciones y eso depender del indicador de senal que utilicemos.
 
 ### Init, deminios y servicios 
+
+**Demonio :** Es un proceso o programa que se realiza en segundo plano que no tiene interaccion con el usuario y se realiza en segundo plano.
+**Servicio:** Es un proceso en segundo plano que recibe interaccion de otros procesos a traves de la red.
+
+ ```bash
+    ls /etc/init.d   # aqui se encuentran todos los servicios del sistema
+    ls /etc/init     # programas que se ejecutan al inicio  de arranque del SO
+ ```
+Para conocer el estado de un servicio utilizamos la sintaxis: ./apparmor status
+
+
+El proceso de arranque de un sistema en linux considera una serie de etapas que se establecen secuencialmente. El proceso comienta en la BIOS, Se encarga de realizar comprobaciones de integridad del sistema, busca, carga y ejecuta el programa cargador de arranque, es decir, MBR (Master Boot Record) que se encuentra en el primer sector del disco de arranque, esta compuesto por la informacion del cargador de arranque primario, informacion de la tabla de particiones y comprobacion de validacion del mbr. Tambien contiene informacion sobre el GRUB o LILO y se encarga de cargar y ejecutar el cargador de GRUB.
+
+El GRUB (Grand Uniffied Bootloaer), contiene imagenes del kernel instaladas en su sistema que pueden ser ejecutadas, carga la imagen por defecto del kernel, este archivo se encargara de cargar y ejecutar la imagen del kernel y del initrd
+![proceso_arranque](/main/secuenciaBios.png)
+
+
+
+
+
 
 ```bash
     init.d, systemctl, service
