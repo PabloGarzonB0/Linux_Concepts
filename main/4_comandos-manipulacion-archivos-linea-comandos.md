@@ -269,26 +269,35 @@ Todas las senales del sistemas de pueden observar con el comando kill  -l, se de
 
 ### Init, deminios y servicios 
 
-**Demonio :** Es un proceso o programa que se realiza en segundo plano que no tiene interaccion con el usuario y se realiza en segundo plano.
-**Servicio:** Es un proceso en segundo plano que recibe interaccion de otros procesos a traves de la red.
+**Demonio: ** Es un proceso o programa que se realiza en segundo plano que no tiene interaccion con el usuario y se realiza en segundo plano.
+**Servicio: ** Es un proceso en segundo plano que recibe interaccion de otros procesos a traves de la red.
 
  ```bash
     ls /etc/init.d   # aqui se encuentran todos los servicios del sistema
     ls /etc/init     # programas que se ejecutan al inicio  de arranque del SO
  ```
-Para conocer el estado de un servicio utilizamos la sintaxis: ./apparmor status
+Para conocer el estado de un servicio utilizamos la sintaxis: ./apparmor status. Tenemos el comando systemctl para gestionar el control de servicios, se debe utilizar los argumentos tipo stop, start o statuts para cambiar el estado de un servicio
 
+service envuelve el comportamiento de systemctl para manitular un servicios y se puede utilizar de la siguiente manera
+```bash
+    sudo service apparmor restart
+    systemctl list_units --type=service # Muestra una lista de todos los servicios disponibles
+```
 
 El proceso de arranque de un sistema en linux considera una serie de etapas que se establecen secuencialmente. El proceso comienta en la BIOS, Se encarga de realizar comprobaciones de integridad del sistema, busca, carga y ejecuta el programa cargador de arranque, es decir, MBR (Master Boot Record) que se encuentra en el primer sector del disco de arranque, esta compuesto por la informacion del cargador de arranque primario, informacion de la tabla de particiones y comprobacion de validacion del mbr. Tambien contiene informacion sobre el GRUB o LILO y se encarga de cargar y ejecutar el cargador de GRUB.
 
 El GRUB (Grand Uniffied Bootloaer), contiene imagenes del kernel instaladas en su sistema que pueden ser ejecutadas, carga la imagen por defecto del kernel, este archivo se encargara de cargar y ejecutar la imagen del kernel y del initrd
 ![proceso_arranque](/main/secuenciaBios.png)
 
-
-
-
-
+Sniffer : Realiza una copia de trafico de red para analizarlo y visualizar el tipo de trafico, observar si hay enbotellamiento o si hay anomalias. Se utiliza el comando tcpdump que permitira capturar todo el trafico de red.
 
 ```bash
-    init.d, systemctl, service
-```   
+    sudo tccpdump -i enp03
+    sudo wireshark [interfaz de host]
+    sudo nmap -sS [direccionRed/mascara]
+```
+
+## Descarga  de informacion mediante los comando Curl y Wget
+Comandos utilizados para transferir datos desde o hacia un servidor, es compatible con multiples protocolos de comunicacion tal como DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS,IMAP, LDAP, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTPS, TELNET or TFTP.
+
+Util para realizar peticiones a una API, extraer informacion del head de una api.
