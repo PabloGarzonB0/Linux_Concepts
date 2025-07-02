@@ -319,3 +319,25 @@ Tenemos el comando **ss**  comando utilizado para visualizar las siguiente conex
 Corresponde  al metodo de instalar y mantener el software del sistema Linux, corresponde con uno de los aspectos mas importantes y diferenciadores de una distribucion de linux. El software de linux cambia constantemente, por lo tanto el codigo fuente se compila y se intala cada vez que se realiza una actualizacion. Los sistemas gestores de paquetes son:
 - Estilo Debian (.deb) : para distribuciones tipo debian, ubuntu, lunux Mint, Raspbian
 - Estilo ReadHat (.rpm) Fedora, CentOs, RedHat, OpenSuse
+
+Un **paquete** es la unidad basica de un sistema de gestion de paquetes, visualizado como un fichero comprimido que contiene un conjunto de ficheros relativo de una aplicacion de software. Contiene metadatos, scripts para la instalacion y desistalacion de aplicacion de software. El paquete no tiene por que ser creado por el desarrollador de la aplicacion de software.
+
+En la mayoria de las ocasiones, el creador del paquete tiene que realizar algunas modificaciones sobre el codigo fuente  para adaptarlo a determinadas distibruciones.
+
+Por otro lado, *un repositorio de paquetes* es un lugar donde la distribucion tiene acceso para realizar soporte sobre las diferentes fases del ciclo de desarrollo de software (desarrollo, produccion, software de terceros ... etc)
+
+Se agregan repositorios constantemente de terceros, para instalar software que no se encuentre en los repositorios mantenidos por la distribucion de Linux. Los sistemas de gestion de paquetes proporcionan un mecanismo para resolver las dependencias e instalarlas cuando se instala una aplicacion de software.
+
+Generalmente los comandos sudo apt update y upgrate para actualizar los paquetes que se encuentran disponibles dentro del repositorio central de la distro, con el siguiente comando podemos saber si existe un paquete dentro del repositorio.
+
+```bash
+    apt-cache search Nombre-paquete
+```
+
+Cuando un software no se encuentra instalado dentro de nuestro sistema es necesarrio descargar los paquetes de internet y ejecutar el servicio de la siguiente manera
+
+```bash
+    sudo dpkg -i [ruta de destarga del paquete .deb]
+    sudo service [paquete] [start]
+```
+El repositorio fuente donde se realizan las modificaciones y actualizaciones de codigo se encuentra en la ruta /etc/apt/sources.list, lo recomendable es crear nuevos ficheros y agregarlos a la ruta /etc/apt/sources.list.d/ 
