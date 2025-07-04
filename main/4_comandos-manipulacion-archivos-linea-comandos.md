@@ -341,3 +341,18 @@ Cuando un software no se encuentra instalado dentro de nuestro sistema es necesa
     sudo service [paquete] [start]
 ```
 El repositorio fuente donde se realizan las modificaciones y actualizaciones de codigo se encuentra en la ruta /etc/apt/sources.list, lo recomendable es crear nuevos ficheros y agregarlos a la ruta /etc/apt/sources.list.d/ 
+### Entorno en linux
+Dentro de linux se definen una serie de variables y funciones que manejan todo tipo de operaciones al utilizar comandos dentro de la shell, es asi que utilizando el comando `printenv` se aprecia la informacion respecto a determinadas funciones y al contenido implicito en ellas.
+
+Los ficheros que se aplican a todo el sistema se establecen de la siguiente manera:
+- /etc/enviroment : Fichero especifico para la definicion de variables de entorno. No puede contener scripts
+- /etc/profile : Permite definir variables de entorno y scripts, aunque no es apropiado modificar
+- /etc/profile.d : contiene scripts que se ejecutan en shells con login
+- /etc/bash.bashrc : Permite definir variables de etorno y scripts que estarn disponibles para programas iniciados desde la shell bash. Las variables que se definen en este fichero no ban a estar disponibles para programas iniciados desde la interfaz grafica.
+
+**Ficheros con aplicacion a un usuario especifico**
+~/.profile → Permite definir variables de entorno y scripts. Este fichero se ejecutará al iniciar la sesión de Escritorio o en una shell con login. Las variables afectan a todos los programas ejecutados desde el escritorio gráfico o desde la shell.
+
+~/.bashrc → Permite definir variables de entorno y scripts. Se ejecuta cuando se abre la shell sin necesidad de hacer login. Es un fichero especifico de la shell bash, lo que quiere decir que las variables definidas solo afectaran a los programas ejecutados desde bash.
+
+~/.bash_profile, ~/.bash_login → Permiten definir variables de entorno y scripts. Se ejecutan cuando se utiliza una shell con login. Son ficheros específicos de bash, lo que quiere decir que las variables definidas solo afectaran a los programas ejecutados
