@@ -356,3 +356,52 @@ Los ficheros que se aplican a todo el sistema se establecen de la siguiente mane
 ~/.bashrc → Permite definir variables de entorno y scripts. Se ejecuta cuando se abre la shell sin necesidad de hacer login. Es un fichero especifico de la shell bash, lo que quiere decir que las variables definidas solo afectaran a los programas ejecutados desde bash.
 
 ~/.bash_profile, ~/.bash_login → Permiten definir variables de entorno y scripts. Se ejecutan cuando se utiliza una shell con login. Son ficheros específicos de bash, lo que quiere decir que las variables definidas solo afectaran a los programas ejecutados
+
+
+Al crear nuestros propios scripts es posible utilizar el interprete de comandos o shell **zsh** 
+
+## Expresiones regulares
+Notacion simbolica para buscar patrones en texto, para ello se utiliza la herramiento grep (Global Regular Expression Print). Se tiene la siguiente estructura para realizar las busquedas con este comando:
+
+grep [option] regex [file..] 
+
+El conjunto de simbolos utilizados para operaciones de busqueda se presentan a continuacion:
+^ $ . [] {} - ? * + () | \ -> (Metacaracteres)
+Todos los simbolos fura de estos simbolos se consideran simbolos literales(se intepretan asi como se ven)
+
+| Simbolo|Descripcion |
+|--------|------------|
+|   .    | Define una continuacion de un literal en la posicion del ., esto quiere decir que complementa la palabra haciendo match un caracter adicional|
+| ^ y $ | Simbolos de anclaje, indican la posicion de aparecion de un elemento, en este situacion ^ indica que un elemento aparece al principio y $ representa la salida o elemento al final |
+|[]| agrupa a los caracteres que se encuentran en una expresion literal, es decir, que trae a todos los elementos que contengan los 
+caracteres que se encuentran dentro de los corchetes|
+|[^]|Dentro de los corchetes es conocido como caracter de negacio, y establece que los caracteres que lo acompanan no aparezcan en la salida en consola|
+| - |Definicion de rangos, es practico cuando se quieren definir una serie de caracteres donde deba coincidir el elemento|
+
+### Clases POSIX
+A continuacion se definen un numero de clases que proporcionan rangos utiles de caracteres que podemos utilizar al construir una expresion regular.
+
+A continuacion se presentan:
+`[:alnum:]` -> Los caracteres alfanumericos. En ASCII, equivalen a [A-Za-z0-9] 
+`[:word:]` -> LAgade caracteres de subrayado (_)
+`[:alpha:]` -> Los caracteres alfabeticos. En ASCII, equivalen a [A-Za-z]
+`[:blank:]` -> Incluye caracteres de espacio y tabulacion
+`[:cntrl:]` -> Los codigos de control ASCII. Incluye los caracteres ASCII 0 a 31 y 127
+`[:digit:]` -> numeros del 1 al 9
+`[:graph:]` -> Los caractere visibles. En ASCII, incluye los caracteres 33 a 126
+`[:lower:]` -> Las letras minusculas
+`[:punct:]` -> Los caracteres de puntuacion. En ASCII, es equivalente a [-!"#$%&'()*+,./:;<=>?@[\\\]_`{|}~]
+`[:print:]` -> Los caracteres imprimibles. Todos los caracteres [:graph:] mas el caracter de espacio
+`[:space:]` -> Incluye el espacio, el tabulador, el retorno de carro, la nueva linea, el tabulador vertical y el avance de forma. En ASCII, equivale a: [\t\r\n\v\f]
+`[:upper:]` -> Las letras mayusculas
+`[:xdigit:]` -> Caracteres utilizados para expresar numeros hexadecimales. En ASCII, equivale a :[0-9A-Fa-f]
+
+El estandar de expresiones regulares POSIX tiene 2 secciones generales de sintaxis, la primera basic regular expressions (BER) como todas aquellas herramientas para la captura de patrones tales como ^ $ . [] y * . Por otro lado, las extended regular expressions (ERE) que permiten agrupar un subconjunto desimbolos que hacen parte del estandar basico. (grep solo trabaja con el estandar basico)
+
+`grep -E ''` si reconocelos caracteres del estandar extendido.
+```bash
+    echo "76542345C" | grep -E '[0-9]*[A-Z]?'
+    echo "42572346F" | grep -E '[0-9] + [A-Z]?'
+    echo "89343522D" | grep -E '[0-9]{8,8}[A-Z]' # Definiendo una rango de aparicion de un patron, desde un minimo hasta un maximo de valores. 
+
+``` 
