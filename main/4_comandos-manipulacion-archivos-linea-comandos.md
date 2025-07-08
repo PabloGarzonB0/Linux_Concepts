@@ -405,3 +405,7 @@ El estandar de expresiones regulares POSIX tiene 2 secciones generales de sintax
     echo "89343522D" | grep -E '[0-9]{8,8}[A-Z]' # Definiendo una rango de aparicion de un patron, desde un minimo hasta un maximo de valores. 
 
 ``` 
+Expresion regular para buscar un correo electronico dentro de directorio o fichero, considerar el siguiente comando
+```bash 
+    grep -h -o -r -E '[a-z]+@[a-z]+\.[a-z]+' 2> /dev/null # Listado de correos electronicos en los ficheros
+```
