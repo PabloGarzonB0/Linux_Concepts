@@ -8,9 +8,7 @@ Ahora, podemos minimizar el trabajo de una computadora con una asombrosa capacid
 Para construir un fichero de tipo shell necesitamos de un interprete al inicio del archivo tal que al ejecutarse permite identificar que tipo de lenguaje de programacion se esta utilizando
 ```bash
     #!/bin/bash
-
     ### Se procese a escribir el codigo del proyecto ###
-
 ```
 Se pueden definir variables dentro del fichero pero todo tipo de asignacion de debe realizar sin espacio entre los elementos tal que asi:
 ```bash
@@ -22,4 +20,91 @@ Otra manera de comentar un texto extenso sin la necesidad de tener que usar el c
 ```bash
     <<EOF [Texto que se escribe en intermedio]    EOF
 ```
+
+## Funciones en Linux
+Las estructuras de funcion tienen una baja complejidad y en si representan la separacion en un componente individual de todo un sistema, se construyen de la siguiente manera
+```bash
+miFunction () {
+    "Comando a procesar"
+    # Implementacion de parametros en base a los argumentos llamados a la funcion
+    $1
+    $2
+    $3
+    local variable1=valor # La definicion de variables internas se define con termino local que establece el alcance de la variable, en este caso solo dentro de la funcion
+    return 
+}
+# Llamado a la funcion
+miFunction arg1 arg2 arg3
+```
+
+Es importante  cconsiderar que la funcion se puede crear con retorno o sin returno y los argmentos que utiliza se organizan secuencialmente con el patron $1, $2, $3 y $4 asi sucesivemente,
+en el caso de  introducir una condicion por linea de comando y se desea ver el valor de retorno en la misma consola se procede a utilizar el comando **echo $1** que returnara la respuesta de la condicion especificada por consola
+
+Expresiones utilizadas para evaluar condiciones con números:
+
+                  Expresión                                    Verdadero si...
+
+integer1 -eq integer2     →     integer1 es igual a integer2
+
+integer1 -ne integer2     →     integer1 no es igual a integer2
+
+integer1 -le integer2     →     integer1 es menor que o igual a integer2
+
+integer1 -lt integer2     →     integer1 es menor que integer2
+
+integer1 -ge integer2     →     integer1 es mayor que o igual a integer2
+
+integer1 -gt integer2     →     integer1 es mayor que integer2
+
+
+
+Expresiones utilizadas para evaluar condiciones con strings:
+
+           Expresión                                    Verdadero si...
+
+string                                →     string no es null.
+
+-n string                         →     La longitud de string es mayor a cero
+
+-z string                         →     La longitud del string es cero
+
+string1 = string2       →     string1 y string2 son iguales
+
+string1 == string2     →     string1 y string2 son iguales
+
+string1 != string2     →     string1 y string2 no son iguales
+
+
+
+Expresiones utilizadas para evaluar condiciones con ficheros:
+
+                  Expresión                                    Verdadero si...
+
+file1 -ef file2      →     file1 y file2 tienen el mismo número de inodo (mismo hard link)
+
+file1 -nt file2      →     file1 is mas nuevo que file2
+
+file1 -ot file2      →     file1 is mas antiguo que file2
+
+-b file                        →     file existe y es un block-special (device) file
+
+-c file                        →     file existe y es un character-special (device) file
+
+-d file                        →    file existe y es un directorio
+
+-e file                        →     file existe
+
+-f file                        →     file existe y es un fichero regular
+
+-k file                        →    file existe y tiene “sticky bit”
+
+-L file                        →    file existe y es un enlace simbólico
+
+-s file                        →    file existe y tiene longitud mayor a cero
+
+-u file                        →     file existe y es setuid
+
+-w file                        →    file existe y se puede escribir (por el usuario efectivo)
+
+-x file                        →    file existe y es ejecutable (por el usuario efectivo)
 
