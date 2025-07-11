@@ -40,7 +40,7 @@ miFunction arg1 arg2 arg3
 Es importante  cconsiderar que la funcion se puede crear con retorno o sin returno y los argmentos que utiliza se organizan secuencialmente con el patron $1, $2, $3 y $4 asi sucesivemente,
 en el caso de  introducir una condicion por linea de comando y se desea ver el valor de retorno en la misma consola se procede a utilizar el comando **echo $1** que returnara la respuesta de la condicion especificada por consola
 
-Expresiones utilizadas para evaluar condiciones con números:
+Expresiones utilizadas para evaluar condiciones con números utilizada para condicionales o para ciclos como while o for:
 
                   Expresión                                    Verdadero si...
 
@@ -108,3 +108,45 @@ file1 -ot file2      →     file1 is mas antiguo que file2
 
 -x file                        →    file existe y es ejecutable (por el usuario efectivo)
 
+## Estructura de ciclos 
+
+El ciclo for tiene la siguiente estructura que se ejecuta dentro de la shell
+```bash
+    #for i in {1..10}; do
+#	echo "Esta es la iteracion $i"
+#done
+
+
+# Se puede iterar sobre ficheros
+#for i in /var/log/*.log; do
+#	echo "Esta iteracion va bien en :  $i"
+#done
+
+# se itere sobre todos los ficheros para encontrar elementos .zip
+#for i in $(find /usr/bin -name '*zip'); do
+#	echo "Esta iteracion actua sobre el fichero: $i"
+#done
+
+
+for ((i=0; i<5; i=i+1)); do
+	echo "Esta es la iteracion: $i"
+done
+```
+
+se presenta por otro lado la estructura del ciclo while:
+```bash
+#!/bin/bash
+
+var=4
+while [ $var -lt 10  ]; do
+	echo "El valor de la variable es: $var"
+	if [ $var -lt 5 ]; then
+		break
+	fi
+	var=$((var + 1))  # variable de iteracion externo
+	# break para romper el seguimiento del bucle
+	# continue para saltar una iteracion del bucle
+done
+
+echo "Esta linea se encuentra despues del bucle"
+```

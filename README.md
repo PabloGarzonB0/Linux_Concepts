@@ -79,3 +79,4 @@ Dentro  de la carpeta principal llamada <Strong>Main</Strong> se encontraran las
 
 > [!NOTE]
 > Espero puedan servirte para tener una nocion clara del potencial y capacidad que tiene linux para sumergirte en la informática 
+
