@@ -90,4 +90,25 @@ EOF
 }
 
 if [ $(find salido_nmap.raw -mmin -30) ]; then
+    while true; do
+        read -p "Existe salida_nmap.rae con antiguedad menos a 30 minutos. Sovreescribir? [y/n]: "
+        case "$REPLY" in
+            [yY]) # Generamos el reporte raw con nmap
+                nmap_report "192.168.239.0/24" "salida_nmap.raw"
+                break
+                ;;
+            [nN]) # No se genera el reporte raw
+                echo "[INFO] Utilizando el fichero salida_nmap.raw existente."
+                break
+                ;;
+        esac
+    done
+else
+    # Generamos el reporte rawcon nmap
+    nmap_report "192.168.239.0/24" "salida_namp.raw"
+fi
+# Generamos el reporte con los resultados de nmap en HTML
+echo "[INFO] Generando reposte html..."
+generar_hrml > resultados_nmap.html
+echo "[OK] Reporte resultados_nmp.html generado correctamente."
      
