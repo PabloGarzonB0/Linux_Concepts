@@ -150,3 +150,30 @@ done
 
 echo "Esta linea se encuentra despues del bucle"
 ```
+
+Por otro lado se tiene el ciclo **until** funciona como el caso contrario de while, es decir que se va a ejecutar hasta que una condicion se cumpla, pero en este caso sigue el flujo inverso de while. Un ejemplo se presenta a continuacion.
+
+```bash
+    #!/bin/bash
+
+    var=4
+    until [ $var -lt 1 ]; do
+        echo "El valor de la variable es: $var"
+        var=$((var-1))
+    done
+```
+En lugar de utilizar indefinidamente multiples  if y else if se pueden utilizar los case como las diferetes variantes de una lectura, ya sea en tipo numerico o en tipo string, al finalizar cada uno de los casos es importante cerrar el caso con un ;;
+```bash
+    read -p "Introduce la opcion [0-3]: "
+    case "$REPLY" in
+        1) echo "El usuario ha seleccionado la opcion a"
+            ;;
+        2) echo "El usuario ha seleccionado la opcion b"
+            echo "Esta es otra linea de codigo"
+            ;;
+        3) echo "El uuaroi ha seleccionado la opcion c"
+            ;;
+        4) exit
+    esac
+    # cada undo de los casos puden ser remplazados por wildcards o patrones de expansion tales como [[:alpha:]] o *.txt y asi en adelante.
+```
