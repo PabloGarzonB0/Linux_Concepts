@@ -177,3 +177,28 @@ En lugar de utilizar indefinidamente multiples  if y else if se pueden utilizar 
     esac
     # cada undo de los casos puden ser remplazados por wildcards o patrones de expansion tales como [[:alpha:]] o *.txt y asi en adelante.
 ```
+
+## Comando read
+En el caso de interactuar por consola, es posible que podamos introducir datos en variables utilizando el comando read, asi bien, para poder ver el valor de esas variables  si se ingresapor defecto es introducir el comando ```echo $REPLY``` que imprime en pantalla el valor ingresado.
+
+
+### Array - arreglos multidimensionales
+
+para la declaracion de arreglos es importante su declaracion para ello se utiliza el siguiente comando ```declare -a var_array ```
+los valores se pueden asignar rapidamente al arreglo mediante la siguiente expresion array=(valor1 valor2 valor3 valor4 valor5)
+
+Para extraccion de todos los elementos de un vector mediante un bucle se utiliza la siguiente combinacion:
+```bash
+    colores=(azul verde amarillo rojo)
+    for i ${colores{*}}; do echo $i; done
+    echo ${#colores[*]}  # Trae consigo el tamano del vector
+    echo ${#colores[1]}  # Trae consido el tamano del elemento 1
+    echo ${colores[1]}   # Trae el primer elemento
+    echo ${!array3[*]]}  # Posiciones dentro del array se encuentran ocupadas
+    colores+=(morado negro blanxo)  #Agregar nuevos valores al vector
+    unset colores # Eliminacion de variables
+```
+
+
+
+
